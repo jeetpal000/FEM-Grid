@@ -1,0 +1,143 @@
+  img,
+  picture {
+    max-width: 100%;
+    display: block;
+  }
+   
+  
+  body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+  
+    font-family: Arial, Helvetica, sans-serif;
+ 
+    background-color: #daebf0;
+  }
+
+
+  
+  .bg-primary-400 {
+    background: #600fa3;
+  }
+  .bg-secondary-400 {
+    background: #1e314bc4;
+  }
+  .bg-secondary-500 {
+    background: #0f043ca9;
+  }
+  
+  .bg-neutral-100 {
+    background:#fff;
+  }
+  
+  .text-neutral-100 {
+    color: #fff;
+  }
+  .text-secondary-400 {
+    color: #333;
+  }
+  .img-border {
+    border: 2px solid #6400f9;
+  }
+  
+
+  .testimonial-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+     'one'
+     'two'
+     'three'
+     'four'
+     'five';
+  
+    padding-block: 2rem;
+    width: min(95%, 70rem);
+    margin-inline: auto;
+  }
+  
+  .testimonial {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 2.5rem 3.75rem 3rem -3rem #494848;
+  }
+  
+  .testimonial:nth-child(1) {
+    grid-area: one;
+  }
+  .testimonial:nth-child(2) {
+    grid-area: two;
+  }
+  .testimonial:nth-child(3) {
+    grid-area: three;
+  }
+  .testimonial:nth-child(4) {
+    grid-area: four;
+  }
+  .testimonial:nth-child(5) {
+    grid-area: five;
+  }
+  
+  @media screen and (min-width: 33em) {
+    .testimonial-grid {
+        grid-template-areas:
+        "one one"
+        "two three"
+        "five five"
+        "four four";
+    }
+  }
+
+  
+  
+  @media screen and (min-width: 54em) {
+    .testimonial-grid {
+        grid-template-areas:
+            "one one two"
+            "five five five"
+            "three four four";
+    }
+  }
+  
+  @media screen and (min-width: 75em) {
+    .testimonial-grid {
+        grid-template-areas:
+        "one one two five"
+        "three four four five";
+    }
+  }
+  
+  
+  .testimonial.quote {
+    background-image: url("https://kabir-sagiii.github.io/CSS_Grid_learn-grid-the-easy-way/images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right 10%;
+  }
+  
+  .testimonial img {
+    width: 1.75rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+  
+  .testimonial .name {
+    font-size: 5x;
+    line-height: 1;
+  }
+  
+  .testimonial .position {
+    font-size: 10px;;
+    opacity: 0.5;
+  }
+  
+  .testimonial > p:first-of-type {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: bold;
+  }
+    
+
+
+
